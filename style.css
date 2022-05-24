@@ -8,20 +8,23 @@ border-color:1 px black transparent;
 width: 60px;
 height: 100%;
 font-size: 25pt;
+border-color: pink;
 }
 
 input[type="text"]
 {
 border-radius: 10px;
 text-align: right;
-background-color:rgba(255, 255, 255,.05);;
+background-color:rgba(255, 255, 255,.05);
 color: black;
 border-color: white;
 width: 95%;
 height: 85%;
-font-size: 15pt;
+font-size: 15pt; 
 }
-
+input:focus{
+    outline: none;
+}
 table{
     margin-left: auto;
     margin-right: auto;
@@ -29,7 +32,7 @@ table{
     z-index: 2;
     width: 300px;
     height: 300px;
-    background-color:rgba(255, 255, 255,.05);
+    background-color:rgba(212,17, 179,.05);
     box-shadow: 0 0 10px
     rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
@@ -45,12 +48,12 @@ table{
     position: relative;
     margin-left: 50%;
     z-index: 1;
-    animation: move-down 2s ease-in
+    animation: move-down 5s ease-in
     infinite alternate;
 }
 .circle:nth-child(1){
     left: -25px;
-    bottom: -35px;
+    bottom:0px;
 }
 .circle:nth-child(2){
     top: -25px;
@@ -66,7 +69,6 @@ table{
 .blob{
     border-radius:42% 56% 72% 28%/ 42% 42% 56% 48%;
     background-color:radial-gradient(#b0e633,#53ef7d) ;
-    background-size: cover;
     position: relative;
     z-index: 1;
     animation: morph 3.5s linear infinite;
