@@ -1,0 +1,96 @@
+input[type="button"]
+{
+border-radius: 100px;
+
+background-color:rgba(255, 255, 255,5);
+color: black;
+border-color:1 px black transparent;
+width: 60px;
+height: 100%;
+font-size: 25pt;
+}
+
+input[type="text"]
+{
+border-radius: 10px;
+text-align: right;
+background-color:rgba(255, 255, 255,.05);;
+color: black;
+border-color: white;
+width: 95%;
+height: 85%;
+font-size: 15pt;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    background-color:rgba(255, 255, 255,.05);
+    box-shadow: 0 0 10px
+    rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    color: black;
+    border-radius: 10px;
+   
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e633,#53ef7d);
+    border-radius: 50%;
+    position: relative;
+    margin-left: 50%;
+    z-index: 1;
+    animation: move-down 2s ease-in
+    infinite alternate;
+}
+.circle:nth-child(1){
+    left: -25px;
+    bottom: -35px;
+}
+.circle:nth-child(2){
+    top: -25px;
+    left: -25px;
+    animation: move-up;
+}
+
+.table-div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blob{
+    border-radius:42% 56% 72% 28%/ 42% 42% 56% 48%;
+    background-color:radial-gradient(#b0e633,#53ef7d) ;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    animation: morph 3.5s linear infinite;
+}
+
+@keyframes morph{
+    0%,100%{
+        border-radius: 42% 56% 72% 28%/ 42% 42% 56% 48%;
+    }
+    33%{
+        border-radius: 72% 28% 48% 48%/ 28% 28% 72% 72%;
+    }
+    66%{
+        border-radius: 100% 56% 56% 100%/ 100% 100% 56% 56%;
+    }
+    }
+
+@keyframes move-up{
+        to{
+            transform: translateY(-75px);
+        }
+    }
+@keyframes move-down{
+    to{
+        transform: translateY(75px);
+    }
+}
